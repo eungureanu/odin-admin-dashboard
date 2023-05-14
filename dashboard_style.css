@@ -1,0 +1,163 @@
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}  
+
+body{
+    height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    font-family: "Roboto", "Calibri", sans-serif;
+}
+
+.sidebar{
+    grid-column: 1/2;
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgb(26, 125, 203);
+    color: white;
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    gap: 3vh;
+}
+
+.sidebar-heading, .menu1, .menu2 {
+    padding: 5px;
+    margin: 5px;
+    border-style: solid;
+    border-width: 1px;
+    display: grid;
+    gap: 2vh;
+}
+
+.header{
+    background-color: white;
+    box-shadow: 0px 3px 3px rgb(194,199,209);
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.navigation{
+    grid-row: 1/2;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.controls{
+    grid-row: 2/3;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.search{
+    grid-column: 1/2;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.profile{
+    grid-column: 2/3;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: end;
+}
+
+.greeting {
+    grid-column: 1/2;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.buttons{
+    grid-column: 2/3;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: end;
+}
+
+.navigation, .controls{
+    padding: 5px;
+    margin: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.main-content{
+    grid-column: 2/3;
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgb(219, 226,237);
+}
+
+.content {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.projects{
+    margin: 15px;
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    gap: 15px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* if you want to keep the size of the cards fixes, use repeat(auto-fill, 200px) */
+    gap: 10px;
+}
+
+.heading{
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.project-card{
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border-left: orange;
+    border-left-style: solid;
+    border-left-width: 5px;
+    box-shadow: 2px 2px 2px rgb(194,199,209);
+    display: grid;
+    grid-template-rows: max-content max-content 1fr;/* the height of the first two rows will adjust based on their content. The third row will take up the remaining space at the bottom of the card; used together with align-self: end; on the mgmt class*/
+}
+
+.project-title{
+    font-weight:900;
+    font-size: 16px;
+}
+
+.project-description{
+    font-size: 14px;
+    padding: 5px 0px;
+}
+
+.mgmt{
+    justify-self: end;
+    align-self: end;
+}
+
+.mgmt img {
+    width: 18px;
+    height: 18px;
+    padding: 5px;
+}
+
+.news{
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    gap: 3vh;
+}
